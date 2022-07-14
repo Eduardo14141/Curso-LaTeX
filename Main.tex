@@ -1,0 +1,53 @@
+% Definir el documento
+\documentclass[12pt]{report}
+\include{Preámbulo.tex}
+
+\begin{document}
+
+	\maketitle
+	\tableofcontents
+	
+	%Definir un capítulo nuevo
+	\chapter{Mi primer capítulo}
+		
+		En la figura \ref{fig:latex-logo}
+		\lipsum[1][1-11]
+	
+		\begin{figure}[h]
+			\centering
+			\begin{subfigure}{0.4\textwidth}
+				\centering
+				\includegraphics[
+					width=\linewidth,
+					height=40mm,
+					keepaspectratio
+				]{latex.png}
+				\caption{Logo de \LaTeX}
+				\label{fig:latex-logo}
+			\end{subfigure}
+			\hfill
+			\begin{subfigure}{0.4\textwidth}
+				\centering
+				\includegraphics[
+					width=\linewidth,
+					height=40mm,
+					keepaspectratio
+				]{computer.png}
+				\caption{Imagen de computadora}
+				\label{fig:computer-image}
+			\end{subfigure}
+			\caption{Figura grande}
+			\label{fig:grande}
+		\end{figure}
+		
+		Hola \hfill mundo
+		
+		\section{Mi primer sección}
+			\lipsum[1-2]
+			\lipsum[1][1-3]
+		
+		% Definir una sección nueva
+		\section{Mi segunda sección}
+			\lipsum[3-5]
+% Termina nuestro documento
+\end{document}

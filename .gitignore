@@ -1,0 +1,16 @@
+# Ignore everything
+*.*
+
+# Except for these
+
+!.gitattributes
+!.gitignore
+!readme.md
+!**.tex
+!**.bib
+!**.png
+!**.jpg
+!**.jpeg
+!**.tex
+!**.bib
+!**.pdf
