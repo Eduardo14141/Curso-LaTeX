@@ -1,3 +1,5 @@
+% & Define alineamientos
+
 % Definir el documento
 \documentclass[12pt]{report}
 \include{Preámbulo.tex}
@@ -40,8 +42,6 @@
 			\label{fig:grande}
 		\end{figure}
 		
-		Hola \hfill mundo
-		
 		\section{Mi primer sección}
 			\lipsum[1-2]
 			\lipsum[1][1-3]
@@ -49,5 +49,52 @@
 		% Definir una sección nueva
 		\section{Mi segunda sección}
 			\lipsum[3-5]
+	\chapter{Empezando con tablas}
+		
+		En la tabla \ref{table:datos2} vemos que ... \lipsum[1]
+		% | -> alt + 124
+		\begin{table}[h!]
+			\centering
+			\begin{subtable}{0.4\textwidth}
+				\centering
+				\begin{tabular}{| r | c |}
+					\hline
+					Variables  & Datos \\ \hline
+					a & 5 \\ \hline
+					a & 5 \\ \hline
+					a & 5 \\ \hline
+					a & 5 \\ \hline
+					a & 5 \\ \hline
+				\end{tabular}
+				\caption{Experimento 1}
+				\label{table:datos1}
+			\end{subtable}
+			\hfill
+			\begin{subtable}{0.4\textwidth}
+				\centering
+				\begin{tabular}{| r | c |}
+					\hline
+					Variables  & Datos \\ \hline
+					a & 5 \\ \hline
+				\end{tabular}
+				\caption{Experimento 2}
+				\label{table:datos2}
+			\end{subtable}
+			\caption{Experimentos realizados}
+			\label{table:datos}
+		\end{table}
+		
+		\begin{tabular}{| l | r | c | p{5cm}|}
+			\hline
+			Alineamiento & Alineamiento & Alineamiento & Alineamiento \\\hline
+			l & r & c & p \\\hline
+		\end{tabular}
+		
+		\begin{tabularx}{\linewidth}{| l | X |}
+			\hline
+			Paquete & Detalles\\\hline
+			tabularx & Define un nuevo tipo de columna ``X" que ocupa el resto de espacio, para ello debemos de definir un argumento más, que es el ancho de la tabla\\\hline
+			tabu & Amplia las capacidades de tabularx \\\hline
+		\end{tabularx}
 % Termina nuestro documento
 \end{document}
