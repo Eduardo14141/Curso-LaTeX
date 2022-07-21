@@ -83,18 +83,24 @@
 			\caption{Experimentos realizados}
 			\label{table:datos}
 		\end{table}
+		% *{n}c -> Definir n columnas
 		
-		\begin{tabular}{| l | r | c | p{5cm}|}
-			\hline
-			Alineamiento & Alineamiento & Alineamiento & Alineamiento \\\hline
-			l & r & c & p \\\hline
-		\end{tabular}
+		\begin{talltblr}[
+			caption = {Nuestra primer talltblr},
+			label = {table:first-talltblr}
+		]{
+			colspec = {X[0.5] *{2}X X[0.5, c]},
+			hlines,
+			vlines,
+			width = 1\columnwidth
+		}
+			``hola & mundo & mundial" & Wow\\
+			5 & t & b & centrado \\
+			f & h & j & centered\\
+			X[0.5] & X[2] & X[2] & X[0.5, c]
+		\end{talltblr}
 		
-		\begin{tabularx}{\linewidth}{| l | X |}
-			\hline
-			Paquete & Detalles\\\hline
-			tabularx & Define un nuevo tipo de columna ``X" que ocupa el resto de espacio, para ello debemos de definir un argumento más, que es el ancho de la tabla\\\hline
-			tabu & Amplia las capacidades de tabularx \\\hline
-		\end{tabularx}
+		\(5 \times 6 $
+		
 % Termina nuestro documento
 \end{document}
