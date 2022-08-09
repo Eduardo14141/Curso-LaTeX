@@ -21,13 +21,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Hipervínculos y referencias
+% Hipervínculos, referencias
+% y glosarios
 
 \usepackage[hidelinks]{hyperref}
 \usepackage[spanish]{cleveref}
+
+\usepackage[
+	translate=true,
+	toc,
+	acronym
+]{glossaries}
+
 \usepackage[
 	backend=biber,
-	style=ieee,
+	style=apa,
+	citestyle=apa,
 	hyperref=true,
 	url=false
 ]{biblatex}

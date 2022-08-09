@@ -7,6 +7,12 @@
 	\listoffigures
 	\listoftables
 	
+	%\glsfindwidesttoplevelname
+	% style
+	
+	\printglossary[type=\acronymtype, nonumberlist, title={Abreviaciones y siglas}]
+	\printglossary[type=\glsdefaulttype, nonumberlist]
+	
 	%Definir un capítulo nuevo
 	\chapter{Empezando con imágenes}
 		
@@ -200,7 +206,21 @@
 			\item Item 4
 		\end{enumerate}
 		
-		\lipsum[1][1] \cites{nadeeshani_nicotinamide_2022}{kalogirou_solar_2004}
+		Estos son los ejemplos de citas que mostramos: 
+		\begin{itemize}
+			\item las múltiples citas se producen con el comando \textbf{\textit{cites}} \cites{nadeeshani_nicotinamide_2022}{kalogirou_solar_2004}
+			\item las citas entre paréntesis se producen con \textbf{\textit{parencite}} \parencite{kalogirou_solar_2004}
+			\item \textbf{\textit{textcite}} nos produce citas en texto conforme a lo requerido
+		\end{itemize}
+		
+		\section{Glosarios y acrónimos}
+			\Gls{fluorescencia}: no tiene que ver con la \gls{energia_termica}, pero usemos un término en plural como: \glspl{colector_solar}.
+			
+			\begin{itemize}
+				\item Imprimos completo \acrfull{iaea}
+				\item Imprimir largo \acrlong{onu}
+				\item Imprimir corto \acrshort{inin}
+			\end{itemize}
 				
 % Termina nuestro documento
 	\printbibliography[heading=bibintoc]
