@@ -6,6 +6,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lenguaje y localización
+
+\crefname{table}{\spanishtablename}{\spanishtablename}
+\crefname{figure}{fig.}{figs.}
+\crefname{reaction}{reacción}{reacciones}
+\crefname{Reaction}{Reacción}{Reacciones}
+\crefname{section}{sección}{secciones}
+\crefname{Section}{Sección}{Secciones}
+
+\decimalpoint
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hipervínculos y referencias
+
+\hypersetup{
+	colorlinks = blue!40,
+	linkcolor = black,
+	urlcolor = red!40!green!90!blue!40
+}
+
+\addbibresource{bib/References.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Imágenes
 
 \graphicspath{{./figures}}
@@ -30,6 +55,18 @@
 \definecolor{background}{HTML}{E7EBF4}
 
 \definecolor{pink}{RGB}{176,106,196}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tipografía y color
+
+%Listas
+
+\SetEnumitemKey{columns}{
+	before = \begin{multicols}{#1},
+	after = \end{multicols}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

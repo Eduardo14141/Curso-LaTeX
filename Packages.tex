@@ -2,19 +2,43 @@
 % Configuración del documento
 \usepackage[spanish,es-tabla]{babel}
 \usepackage[
+	letterpaper,
 	top=18mm,
 	bottom=20mm,
 	right=20mm,
 	left=25mm
 ]{geometry}
 
+\usepackage{multicol}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Matemáticas
 
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{siunitx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hipervínculos y referencias
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[spanish]{cleveref}
+\usepackage[
+	backend=biber,
+	style=ieee,
+	hyperref=true,
+	url=false
+]{biblatex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tipografía y colores
+
+\usepackage{xcolor}
+\usepackage[shortlabels]{enumitem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -28,8 +52,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Utilidades
-
-\usepackage{xcolor}
 
 \usepackage{lipsum}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
