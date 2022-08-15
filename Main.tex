@@ -1,5 +1,5 @@
 \documentclass[12pt]{report}
-\include{Preámbulo.tex}
+\input{Preámbulo.tex}
 
 \begin{document}
 	\maketitle
@@ -221,6 +221,24 @@
 				\item Imprimir largo \acrlong{onu}
 				\item Imprimir corto \acrshort{inin}
 			\end{itemize}
+		
+		\section{Dibujos}
+			\lipsum[1-2]
+			
+			\inputtikz{RectangleAndLine}
+			\inputtikz{Diagram}
+		
+		\section{Diagramas}
+			\lipsum[34-36]
+			
+		\begin{figure}
+			\centering
+			\inputdiagram{FirstDiagram}
+			\caption{Diagrama en forest}
+			\label{fig:FirstDiagram}
+		\end{figure}
+		
+			
 				
 % Termina nuestro documento
 	\printbibliography[heading=bibintoc]

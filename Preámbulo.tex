@@ -1,5 +1,22 @@
 \input{Packages.tex}
 \input{Config.tex}
+\input{CustomKeys.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Datos del documento
+
+% El argumento recibido
+% es el archivo a dibujar
+\NewDocumentCommand{\inputtikz}{m}{
+	\tikzsetnextfilename{#1}
+	\input{tikz/#1.tex}
+}
+
+\NewDocumentCommand{\inputdiagram}{m}{
+	\tikzsetnextfilename{#1}
+	\input{diagrams/#1.tex}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Datos del documento
@@ -7,5 +24,5 @@
 \title{Introducción a \LaTeX}
 \date{\today}
 \author{Eduardo Jiménez}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						

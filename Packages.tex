@@ -1,5 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Configuración del documento
+
 \usepackage[spanish,es-tabla]{babel}
 \usepackage[
 	letterpaper,
@@ -10,6 +11,14 @@
 ]{geometry}
 
 \usepackage{multicol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fuentes, codicación
+
+\usepackage{titlesec}
+\usepackage{fontspec}
+\usepackage{xunicode}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -41,6 +50,8 @@
 	url=false
 ]{biblatex}
 
+\usepackage{csquotes}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,6 +68,18 @@
 \usepackage{subcaption}
 
 \usepackage{tabularray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dibujos y diagramas
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, shadows}
+\usetikzlibrary{external}
+
+% Se necesita compilar con la bandera --shell-escape
+\usepackage[edges, external]{forest}
+\tikzexternalize[prefix=pictures/]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

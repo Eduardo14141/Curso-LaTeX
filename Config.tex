@@ -1,8 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Texto
+% Texto y tipografía
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{12pt}
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Times New Roman}
+
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -16,23 +21,6 @@
 \crefname{Section}{Sección}{Secciones}
 
 \decimalpoint
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Hipervínculos, referencias
-% y glosarios
-
-\hypersetup{
-	colorlinks = blue!40,
-	linkcolor = black,
-	urlcolor = red!40!green!90!blue!40
-}
-
-\makeglossaries
-\loadglsentries{bib/glossary.tex}
-\loadglsentries{bib/acronym.tex}
-
-\addbibresource{bib/References.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -60,18 +48,21 @@
 \definecolor{background}{HTML}{E7EBF4}
 
 \definecolor{pink}{RGB}{176,106,196}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Tipografía y color
+% Other colors
 
-%Listas
-
-\SetEnumitemKey{columns}{
-	before = \begin{multicols}{#1},
-	after = \end{multicols}
-}
-
+\definecolor{codeColor}{RGB}{89,156,255}
+\definecolor{lightgreen}{RGB}{150, 240, 180}
+\definecolor{blue}{RGB}{4, 121, 181}
+\definecolor{linecol}{RGB}{92, 92, 92}
+\definecolor{lightpink}{RGB}{245, 160, 240}
+\definecolor{lightblue}{RGB}{176, 221, 255}
+\definecolor{ultralightblue}{RGB}{230, 230, 255}
+\definecolor{link}{RGB}{25, 74, 141}
+\definecolor{cherry}{RGB}{90, 18, 54}
+\definecolor{lilac}{RGB}{174, 182, 211}
+\definecolor{cred}{RGB}{190, 60, 45}
+\definecolor{lightgray}{RGB}{201, 201, 201}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,4 +75,22 @@
 	sticky-per,
 	exponent-mode = engineering
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hipervínculos, referencias
+% y glosarios
+
+\hypersetup{
+	colorlinks = true,
+	linkcolor = black,
+	citecolor = primary,
+	urlcolor = codeColor
+}
+
+\makeglossaries
+\loadglsentries{bib/glossary.tex}
+\loadglsentries{bib/acronym.tex}
+
+\addbibresource{bib/References.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
